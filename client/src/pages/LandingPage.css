@@ -1,0 +1,251 @@
+.landing-container {
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+
+.landing-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.landing-nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.landing-nav .logo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-section {
+    padding: 80px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 20px 0;
+    color: var(--color-text);
+}
+
+.hero-title span {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.preview-card {
+    width: 400px;
+    height: 500px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    transform: rotateY(-15deg) rotateX(10deg);
+    transition: transform 0.5s ease;
+}
+
+.preview-card:hover {
+    transform: rotateY(0) rotateX(0);
+}
+
+.preview-header {
+    height: 30px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dots span {
+    width: 8px;
+    height: 8px;
+    background: #cbd5e1;
+    border-radius: 50%;
+}
+
+.preview-body {
+    padding: 30px;
+}
+
+.line {
+    height: 10px;
+    background: #f1f5f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.line.title {
+    width: 70%;
+    height: 15px;
+    background: #e2e8f0;
+}
+
+.line.meta {
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.p-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.p-q {
+    height: 8px;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.features-section {
+    padding: 100px 5%;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 40px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.feature-icon.blue {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.feature-icon.green {
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.feature-icon.gold {
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+@media (max-width: 968px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}

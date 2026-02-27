@@ -1,0 +1,28 @@
+# Environment variables
+.env
+
+# Node.js
+node_modules/
+.npm-cache/
+*.log
+error.log
+server_error.log
+
+# Frontend (Vite)
+client/dist/
+client/build/
+
+# Python
+python-service/venv/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Uploads
+server/uploads/
+
+# IDE/OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
